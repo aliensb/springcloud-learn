@@ -2,7 +2,7 @@ spring:
   profiles:
     active: dev
   application:
-    name: hello-spring-cloud-servic-admin
+    name: hello-spring-cloud-zipkin
   cloud:
     config:
       uri: http://localhost:8888

@@ -1,0 +1,20 @@
+server:
+  port: 8769
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+zuul:
+  routes:
+    api-a:
+      path: /api/r/**
+      serviceId: hello-spring-cloud-web-admin-ribbon
+    api-b:
+      path: /api/f/**
+      serviceId: hello-spring-cloud-web-admin-feign
+spring:
+  zipkin:
+    base-url: http://localhost:9411
